@@ -15,18 +15,27 @@ _This Ruby application translates a number into words._
 
 ## Specifications
 
-* _Returns 0 degrees if the two hands overlap exactly._
-  * Example input: 12:00
-  * Example output: 0
-* _If the time is precisely on the hour, returns the hour's angle from 12 o'clock in degrees_
-  * Example input: 3:00
-  * Example output: 90
-* _If the minute amount is non-zero, return the hour's angle from 12 o'clock minus the minute's angle from 12 o'clock in degrees._
-  * Example input: 12:30
-  * Example output: 165
-* _If the resulting angle is greater than 180 degrees, return 360 - result_
-  * Example input: 9:00
-  * Example output: 90
+* _Returns "zero" if the number is 0_
+  * Example input: 0
+  * Example output: "zero"
+* _Returns the correct word for single digit numbers._
+  * Example input: 7
+  * Example output: "seven"
+* _Returns correct word for numbers 10-19._
+  * Example input: 12
+  * Example output: "twelve"
+* _Returns correct word for 10s places._
+  * Example input: 30
+  * Example output: "thirty"
+* _Returns correct word for powers of ten up to one trillion._
+  * Example input: 1,000
+  * Example output: "one thousand"
+* _For numbers that are not even powers of ten, uses correct term for thousands place._
+  * Example input: 900,000
+  * Example output: "nine hundred thousand"
+* _Constructs string with words for each place._
+  * Example input: 1,999
+  * Example output: "one thousand nine hundred ninety nine"
 
 ## Known Bugs
 
